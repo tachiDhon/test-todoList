@@ -28,6 +28,9 @@ function addTodo(event) {
    newTodo.classList.add("todo-item");
    todoDiv.appendChild(newTodo);
 
+   // Sauvegardé dans le localstorage
+   saveLocalTodos(Input.value);
+
    //button complété
    const checkedBtn = document.createElement("button");
    checkedBtn.innerHTML = '<i class="fas fa-check"></i>';
@@ -56,5 +59,16 @@ function deleteChecked(e) {
    //liste vérifié comme etant finie
    const checked = item.parentElement;
    if(item.classList[0] === "check-btn") {checked.classList.toggle("checked")}
+}
+
+function saveLocalTodos(todo) {
+   let todos;
+   if (localStorage.getItem("todos") === null) {
+      todos = [];
+   } else {
+      todos = JSON.parse(localStorage.getItem('todos'));
+   }
+   todos.push(todo);
+   localStorage.setItem("todos", JSON.stringify(todos));
 }
 
