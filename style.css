@@ -98,3 +98,12 @@ form button:hover {
    color: white;
    padding: 0.5rem;
 }
+
+.checked {
+   text-decoration: line-through;
+   opacity: 0.5;
+}
+
+.fa-trash, .fa-check {
+   pointer-events: none;
+}
