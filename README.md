@@ -1,4 +1,4 @@
-# test-todoList
+# test-todoList (1 heure)
 
 En Utilisant vanilla js/html/css(sans React/jquery.libraries externes..), implémenter une app web <todo list> permettant d'effectuer les actions suivantes :
 
